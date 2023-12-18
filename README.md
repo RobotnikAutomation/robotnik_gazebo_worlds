@@ -115,3 +115,12 @@ $ roslaunch rubber_factory_world rubber_factory_world.launch
 ```
 
 <img src="robotnik_gazebo_worlds/images/rubber_factory.png" width="60%">
+
+### Warehose 
+
+World based on the repository [warehouse_simulation_toolkit](https://github.com/wh200720041/warehouse_simulation_toolkit)
+```
+$ roslaunch warehouse_world warehouse_world.launch
+```
+
+<img src="robotnik_gazebo_worlds/images/warehouse.png" width="60%">
