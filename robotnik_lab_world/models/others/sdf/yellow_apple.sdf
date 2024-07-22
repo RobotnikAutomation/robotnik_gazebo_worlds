@@ -1,0 +1,37 @@
+<sdf version='1.6'>
+    <model name='yellow_apple'>
+        <static>false</static>
+        <link name="apple_link">
+            <inertial>
+                <mass>0.1</mass>
+                <inertia>
+                    <ixx>0.0001</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.0001</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.0001</izz>
+                </inertia>
+            </inertial>
+            <visual name='yellow_apple'>
+                <geometry>
+                    <mesh>
+                        <uri>model://others/meshes/apple.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Yellow</name>
+                    </script>
+                </material>
+            </visual>
+            <collision name='yellow_apple'>
+                <geometry>
+                    <sphere><radius>0.06</radius></sphere>
+                </geometry>
+                <pose>0 0 0.06 0 0 0</pose>
+            </collision>
+        </link>
+    </model>
+</sdf>
