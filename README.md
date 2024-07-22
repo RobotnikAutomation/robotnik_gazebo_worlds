@@ -124,3 +124,11 @@ $ roslaunch warehouse_world warehouse_world.launch
 ```
 
 <img src="robotnik_gazebo_worlds/images/warehouse.png" width="60%">
+
+### Robotnik Lab
+
+```
+$ roslaunch robotnik_lab_world robotnik_lab_world.launch
+```
+
+<img src="robotnik_gazebo_worlds/images/robotnik_lab.png" width="60%">
