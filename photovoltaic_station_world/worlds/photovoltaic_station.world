@@ -1,0 +1,471 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>300 300</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>300 300</size>
+            </plane>
+          </geometry>
+          <material>
+            <diffuse>0.6 0.4 0.1 1.0</diffuse>
+            <ambient>0.6 0.4 0.1 1.0</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>2.50134 0.089604 147.633 3.14159 1.57079 3.14159</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <include>
+      <uri>model://sloping_floor</uri>
+      <pose>99.036 35.8598 1.49001 0 -0 0</pose>
+      <name>sloping_floor_up</name>
+    </include>
+    <include>
+      <uri>model://robot_doghouse</uri>
+      <pose>2.0 1.0 -0.027369 0 0 -1.57547</pose>
+      <name>robot_doghouse</name>
+    </include>
+    <include>
+      <uri>model://summit_docking_station</uri>
+      <pose>3.25 -0.1 0 0 0 -3.14</pose>
+      <name>summit_docking_station</name>
+    </include>
+  
+    <!-- UP LEFT PANELS -->
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 35.2524 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_1_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 66.4839 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_1_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 97.7154 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_1_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 128.9469 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_1_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35 35.2524 0.231 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_2_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35 66.4839 0.231 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_2_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35 97.7154 0.231 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_2_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35 128.9469 0.231 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_2_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44 35.2524 0.41 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_3_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44 66.4839 0.41 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_3_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44 97.7154 0.41 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_3_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44 128.9469 0.41 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_3_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53 35.2524 0.589 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_4_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53 66.4839 0.589 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_4_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53 97.7154 0.589 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_4_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53 128.9469 0.589 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_4_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62 35.2524 0.768 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_5_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62 66.4839 0.768 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_5_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62 97.7154 0.768 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_5_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62 128.9469 0.768 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_left_5_4</name>
+    </include>
+
+    <!-- UP RIGHT PANELS -->
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 -5 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_1_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>26.0 -36.2315 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_1_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35.0 -5 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_2_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>35.0 -36.2315 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_2_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44.0 -5 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_3_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>44.0 -36.2315 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_3_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53.0 -5 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_4_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>53.0 -36.2315 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_4_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62.0 -5 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_5_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>62.0 -36.2315 0.052077 0 0.035523 -3.14159</pose>
+      <name>solar_panel_row_up_right_5_2</name>
+    </include>
+
+    <!-- DOWN RIGHT PANELS-->
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 -15 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_1_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 -46.2315 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_1_2</name>
+    </include>
+     <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 -77.463 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_1_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 -108.6945 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_1_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 -15 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_2_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 -46.2315 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_2_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 -77.463 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_2_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 -108.6945 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_2_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 -15 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_3_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 -46.2315 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_3_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 -77.463 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_3_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 -108.6945 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_3_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 -15 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_4_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 -46.2315 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_4_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 -77.463 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_4_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 -108.6945 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_4_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 -15 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_5_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 -46.2315 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_5_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 -77.463 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_5_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 -108.6945 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_right_5_4</name>
+    </include>
+
+    <!-- DOWN LEFT PANELS-->
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 45.2524 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_1_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 76.4879 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_1_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 107.7194 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_1_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>10.0 138.9509 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_1_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 45.2524 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_2_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 76.4879 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_2_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 107.7194 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_2_3</name>
+    </include> 
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>2.0 138.9509 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_2_4</name>
+    </include>
+
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 45.2524 0.0 0  0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_3_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 76.4879 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_3_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 107.7194 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_3_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-6.0 138.9509 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_3_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 45.2524 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_4_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 76.4879 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_4_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 107.7194 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_4_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-15.0 138.9509 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_4_4</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 45.2524 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_5_1</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 76.4879 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_5_2</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 107.7194 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_5_3</name>
+    </include>
+    <include>
+      <uri>model://solar_panel_row</uri>
+      <pose>-24.0 138.9509 0.0 0 0.0 -3.14159</pose>
+      <name>solar_panel_row_down_left_5_4</name>
+    </include>
+  </world>
+</sdf>

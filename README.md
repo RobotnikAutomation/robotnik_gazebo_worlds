@@ -132,3 +132,12 @@ $ roslaunch robotnik_lab_world robotnik_lab_world.launch
 ```
 
 <img src="robotnik_gazebo_worlds/images/robotnik_lab.png" width="60%">
+
+
+### Photovoltaic Station
+
+```
+$ roslaunch photovoltaic_station_world photovoltaic_station_world.launch 
+```
+
+<img src="robotnik_gazebo_worlds/images/photovoltaic_station.png" width="60%">
