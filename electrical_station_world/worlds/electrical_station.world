@@ -13,6 +13,13 @@
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>39.551549</latitude_deg>   <!-- world origin latitude -->
+      <longitude_deg>-0.468086</longitude_deg> <!-- world origin longitude -->
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>              <!-- ENU = 0 -->
+    </spherical_coordinates>
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>
@@ -78,13 +85,6 @@
       <device>default</device>
     </audio>
     <wind/>
-    <spherical_coordinates>
-      <surface_model>EARTH_WGS84</surface_model>
-      <latitude_deg>0</latitude_deg>
-      <longitude_deg>0</longitude_deg>
-      <elevation>0</elevation>
-      <heading_deg>0</heading_deg>
-    </spherical_coordinates>
     <model name='station_base'>
       <link name='link_0'>
         <inertial>
