@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>photovoltaic_station_world</name>
-  <version>0.1.0</version>
+  <version>1.2.0</version>
   <description>photovoltaic_station_world package</description>
 
   <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
