@@ -119,6 +119,13 @@
       <uri>model://electrical_substation_world/models/summit_docking_station</uri>
     </include>
 
+    <!-- Animated worker actor patrolling the central yard -->
+    <include>
+      <name>station_worker_actor</name>
+      <pose>-12 4 0 0 0 0</pose>
+      <uri>model://electrical_substation_world/models/station_worker_actor</uri>
+    </include>
+
     <!-- GUI camera optional -->
     <gui fullscreen="false">
       <camera name="user_camera">
