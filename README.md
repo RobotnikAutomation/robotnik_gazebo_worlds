@@ -89,6 +89,14 @@ ros2 launch electrical_substation_world electrical_substation_world.launch.py
 
 <img src="robotnik_gazebo_worlds/images/electrical_station.png" width="60%">
 
+### Vineyard
+
+```bash
+ros2 launch vineyard_world vineyard_world.launch.py
+```
+
+<img src="robotnik_gazebo_worlds/images/vineyard.png" width="60%">
+
 ### OPIL Factory
 
 > **Note:** **not yet been migrated** to ROS 2 Jazzy and Gazebo Harmonic.  

@@ -1,0 +1,96 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics type='ode'>
+      <max_step_size>0.02</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='libgz-sim-physics-system.so'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='libgz-sim-user-commands-system.so'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='libgz-sim-scene-broadcaster-system.so'/>
+    <plugin name='gz::sim::systems::Sensors' filename='libgz-sim-sensors-system.so'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Imu' filename='libgz-sim-imu-system.so'/>
+    <plugin name='gz::sim::systems::NavSat' filename='libgz-sim-navsat-system.so'/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>48.8566</latitude_deg>
+      <longitude_deg>2.3522</longitude_deg>
+      <elevation>35</elevation>
+      <heading_deg>0</heading_deg>
+  </spherical_coordinates>
+
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <grid>false</grid>
+      <sky/>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+
+    <model name='blender_template_model'>
+      <pose>0 0 0 0 0 0</pose>
+      <!-- Fixed position ? -->
+      <static>true</static>
+      <link name='base_link'>
+        <!-- If not fixed position, inertial moment to compute physics -->
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.083000000000000004</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.083000000000000004</iyy>
+            <iyz>0</iyz>
+            <izz>0.083000000000000004</izz>
+          </inertia>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <!-- Mesh used for appearance. Textures are directly read from the corresponing .mtl. The .mtl is reference in the .obj. -->
+        <visual name='base_visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://vineyard_world/models/vineyard/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <!-- Mesh used for collisions. -->
+        <collision name='base_collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://vineyard_world/models/vineyard/model.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    
+    <light name='Sol' type='directional'>
+      <pose>0 0 20 0.35 .35 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0 0 -1</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.00999999978 0.00999999978 0.00999999978 1</specular>
+      <attenuation>
+        <range>10</range>
+        <linear>1</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
