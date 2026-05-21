@@ -5,12 +5,12 @@
 
 <package format="3">
   <name>agentic_ai_demo</name>
-  <version>2.0.0</version>
-  <description>agentic_ai_demo package</description>
+  <version>0.0.0</version>
+  <description>Basic Gazebo Harmonic world package for agentic_ai_demo.</description>
 
-  <maintainer email="ros-developers@robotnik.es">Robotnik Developers</maintainer>
+  <maintainer email="user@robotnik.es">User</maintainer>
 
-  <license>BSD</license>
+  <license>TODO</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

@@ -27,12 +27,12 @@
       <pose>0 0 10 0 0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.8 0.8 0.8 1</specular>
-      <direction>-0.5 0.1 -0.9</direction>
+      <direction>0 0 -1</direction>
     </light>
 
     <include>
-      <uri>model://agentic_ai_demo</uri>
-      <name>agentic_ai_demo_room</name>
+      <uri>model://final_demo</uri>
+      <name>final_demo_room</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
 

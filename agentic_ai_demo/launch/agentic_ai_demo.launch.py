@@ -19,7 +19,7 @@ def generate_launch_description():
     add_to_launcher.add_arg(
         ExtendedArgument(
             name="world",
-            description="world in gazebo harmonic",
+            description="World name in Gazebo Harmonic",
             default_value="agentic_ai_demo",
         )
     )
@@ -27,7 +27,7 @@ def generate_launch_description():
     add_to_launcher.add_arg(
         ExtendedArgument(
             name="world_path",
-            description="world path in gazebo harmonic",
+            description="World path in Gazebo Harmonic",
             default_value=[FindPackageShare("agentic_ai_demo"), "/worlds/", world, ".world"],  # type: ignore
         )
     )

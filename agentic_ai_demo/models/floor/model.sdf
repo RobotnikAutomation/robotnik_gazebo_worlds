@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!-- Floor model: 30 m x 30 m warehouse room. -->
+<sdf version="1.9">
+  <model name="floor">
+    <static>true</static>
+    <link name="floor">
+      <visual name="floor_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/floor.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.301961 0.290196 0.262745 1</ambient>
+          <diffuse>0.301961 0.290196 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="floor_collision">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>30.0 30.0 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="wall_north_collision">
+        <pose>0 15.0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>30.0 0.10 4.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="wall_south_collision">
+        <pose>0 -15.0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>30.0 0.10 4.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="wall_east_collision">
+        <pose>15.0 0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.10 30.0 4.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="wall_west_collision">
+        <pose>-15.0 0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.10 30.0 4.0</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
