@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="imagen_cubo_3_1">
+    <static>false</static>
+    <link name="link">
+      <gravity>true</gravity>
+      <kinematic>false</kinematic>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.35</mass>
+        <inertia>
+          <ixx>0.0009778125</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0009778125</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0013125</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.15 0.105</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <pose>0.15 0.15 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/box_3_1.glb</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
