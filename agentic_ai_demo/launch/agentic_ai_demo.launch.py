@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import GroupAction, IncludeLaunchDescription
+from launch.actions import GroupAction, IncludeLaunchDescription, SetEnvironmentVariable
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PythonExpression
@@ -15,6 +15,8 @@ def generate_launch_description():
     ld = LaunchDescription()
     add_to_launcher = AddArgumentParser(ld)
     world = LaunchConfiguration("world")
+    package_share = get_package_share_directory("agentic_ai_demo")
+    package_models = os.path.join(package_share, "models")
 
     add_to_launcher.add_arg(
         ExtendedArgument(
@@ -46,9 +48,31 @@ def generate_launch_description():
         "launch",
         "gz_sim.launch.py",
     )
+    resource_paths = [package_models, package_share]
+    gz_sim_resource_path = os.pathsep.join(
+        resource_paths + [os.environ["GZ_SIM_RESOURCE_PATH"]]
+    ) if os.environ.get("GZ_SIM_RESOURCE_PATH") else os.pathsep.join(resource_paths)
+    ign_gazebo_resource_path = os.pathsep.join(
+        resource_paths + [os.environ["IGN_GAZEBO_RESOURCE_PATH"]]
+    ) if os.environ.get("IGN_GAZEBO_RESOURCE_PATH") else os.pathsep.join(resource_paths)
+    gazebo_resource_path = os.pathsep.join(
+        resource_paths + [os.environ["GAZEBO_RESOURCE_PATH"]]
+    ) if os.environ.get("GAZEBO_RESOURCE_PATH") else os.pathsep.join(resource_paths)
 
     gazebo_launch_group = GroupAction(
         actions=[
+            SetEnvironmentVariable(
+                name="GZ_SIM_RESOURCE_PATH",
+                value=gz_sim_resource_path,
+            ),
+            SetEnvironmentVariable(
+                name="IGN_GAZEBO_RESOURCE_PATH",
+                value=ign_gazebo_resource_path,
+            ),
+            SetEnvironmentVariable(
+                name="GAZEBO_RESOURCE_PATH",
+                value=gazebo_resource_path,
+            ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(ros_gz_sim_launch),
                 launch_arguments={
