@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+  <name>agentic_ai_demo</name>
+  <version>0.0.0</version>
+  <description>Basic Gazebo Harmonic world package for agentic_ai_demo.</description>
+
+  <maintainer email="user@robotnik.es">User</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>ros_gz</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

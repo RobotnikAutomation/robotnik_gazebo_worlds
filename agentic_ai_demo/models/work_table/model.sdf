@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="work_table">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <pose>0 0 1.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://floor/meshes/mesa.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <visual name="wood_top_visual">
+        <pose>0 0 1.051 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2.0 1.0 0.003</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.08 0.08 0.08 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://work_table/materials/textures/wood_table_001_diff_1k.jpg</albedo_map>
+              <metalness>0.0</metalness>
+              <roughness>0.65</roughness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <collision name="collision">
+        <pose>0 0 1.0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://floor/meshes/mesa.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
