@@ -1,0 +1,374 @@
+<?xml version="1.0" ?>
+<!-- Shelving unit with boxes -->
+<!-- Onshape document_id: 413e77afccf5d41747a34ccc / workspace_id: b5425021473a3ff7e609cc44 -->
+<sdf version="1.9">
+  <model name="shelves">
+    <static>true</static>
+    <link name="shelf">
+      <!-- Part box -->
+      <visual name="box">
+        <pose>-2.78049 -0.62 2.38786 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_collision">
+        <pose>-2.78049 -0.62 2.38786 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack -->
+      <visual name="shelf_rack_visual">
+        <pose>-8.39331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_collision">
+        <pose>-8.39331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_2 -->
+      <visual name="shelf_rack_2">
+        <pose>-3.67331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_2_collision">
+        <pose>-3.67331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_2 -->
+      <visual name="box_2">
+        <pose>-1.6072 -0.6325 0.382277 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_2_collision">
+        <pose>-1.6072 -0.6325 0.382277 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_3 -->
+      <visual name="box_3">
+        <pose>-3.09159 -0.621707 0.880993 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_3_collision">
+        <pose>-3.09159 -0.621707 0.880993 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_4 -->
+      <visual name="box_4">
+        <pose>-5.18688 -0.6725 0.377986 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_4_collision">
+        <pose>-5.18688 -0.6725 0.377986 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_5 -->
+      <visual name="box_5">
+        <pose>-2.20641 -0.6175 0.885253 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_5_collision">
+        <pose>-2.20641 -0.6175 0.885253 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_3 -->
+      <visual name="shelf_rack_3">
+        <pose>-2.49331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_3_collision">
+        <pose>-2.49331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_4 -->
+      <visual name="shelf_rack_4">
+        <pose>-4.85331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_4_collision">
+        <pose>-4.85331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_5 -->
+      <visual name="shelf_rack_5">
+        <pose>-6.03331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_5_collision">
+        <pose>-6.03331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_6 -->
+      <visual name="shelf_rack_6">
+        <pose>-7.21331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_6_collision">
+        <pose>-7.21331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_6 -->
+      <visual name="box_6">
+        <pose>-1.05503 -0.6175 0.38335 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_6_collision">
+        <pose>-1.05503 -0.6175 0.38335 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_7 -->
+      <visual name="box_7">
+        <pose>-7.82352 -0.5525 0.368958 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_7_collision">
+        <pose>-7.82352 -0.5525 0.368958 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_8 -->
+      <visual name="box_8">
+        <pose>-3.95203 -0.57 1.38433 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_8_collision">
+        <pose>-3.95203 -0.57 1.38433 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_9 -->
+      <visual name="box_9">
+        <pose>-0.447349 -0.655 1.37427 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_9_collision">
+        <pose>-0.447349 -0.655 1.37427 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_7 -->
+      <visual name="shelf_rack_7">
+        <pose>-9.57331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_7_collision">
+        <pose>-9.57331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_10 -->
+      <visual name="box_10">
+        <pose>-8.66574 -0.6025 1.37491 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_10_collision">
+        <pose>-8.66574 -0.6025 1.37491 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_11 -->
+      <visual name="box_11">
+        <pose>-8.96428 -0.565 0.881478 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_11_collision">
+        <pose>-8.96428 -0.565 0.881478 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_12 -->
+      <visual name="box_12">
+        <pose>-5.74187 -0.55 0.38081 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_12_collision">
+        <pose>-5.74187 -0.55 0.38081 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_13 -->
+      <visual name="box_13">
+        <pose>-6.29403 -0.625 0.386296 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_13_collision">
+        <pose>-6.29403 -0.625 0.386296 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_14 -->
+      <visual name="box_14">
+        <pose>-9.29 -0.64 1.89 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_14_collision">
+        <pose>-9.29 -0.64 1.89 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_15 -->
+      <visual name="box_15">
+        <pose>-6.95548 -0.5875 1.37829 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_15_collision">
+        <pose>-6.95548 -0.5875 1.37829 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_16 -->
+      <visual name="box_16">
+        <pose>-4.46562 -0.6325 1.38183 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_16_collision">
+        <pose>-4.46562 -0.6325 1.38183 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_17 -->
+      <visual name="box_17">
+        <pose>-7.54515 -0.59 0.886883 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_17_collision">
+        <pose>-7.54515 -0.59 0.886883 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_18 -->
+      <visual name="box_18">
+        <pose>-8.12702 -0.6275 0.878654 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_18_collision">
+        <pose>-8.12702 -0.6275 0.878654 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_19 -->
+      <visual name="box_19">
+        <pose>-3.9531 -0.645 0.87249 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_19_collision">
+        <pose>-3.9531 -0.645 0.87249 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part shelf_rack_8 -->
+      <visual name="shelf_rack_8">
+        <pose>-1.31331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.615686 0.811765 0.92549 1</ambient>
+          <diffuse>0.615686 0.811765 0.92549 1</diffuse>
+        </material>
+      </visual>
+      <collision name="shelf_rack_8_collision">
+        <pose>-1.31331 -0.8125 0.0930265 0 0 0</pose>
+        <geometry><mesh><uri>meshes/estanteria.stl</uri></mesh></geometry>
+      </collision>
+      <!-- Part box_20 -->
+      <visual name="box_20">
+        <pose>-4.51374 -0.6375 0.883108 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+        <material>
+          <ambient>0.980392 0.796078 0.262745 1</ambient>
+          <diffuse>0.980392 0.796078 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="box_20_collision">
+        <pose>-4.51374 -0.6375 0.883108 0 0 0</pose>
+        <geometry><mesh><uri>meshes/caja.stl</uri></mesh></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

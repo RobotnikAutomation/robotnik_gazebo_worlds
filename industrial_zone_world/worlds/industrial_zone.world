@@ -1,0 +1,260 @@
+<?xml version="1.0" ?>
+<!-- industrial_zone.world
+     Modular warehouse world using <include> for each model.
+     Models are resolved via GZ_SIM_RESOURCE_PATH set by the ament environment hook. -->
+<sdf version="1.9">
+  <world name="industrial_zone">
+
+    <!-- ============================================================ -->
+    <!--  Plugins (Gazebo Harmonic)                                    -->
+    <!-- ============================================================ -->
+    <plugin filename="libgz-sim-physics-system.so"
+            name="gz::sim::systems::Physics" />
+    <plugin filename="libgz-sim-user-commands-system.so"
+            name="gz::sim::systems::UserCommands" />
+    <plugin filename="libgz-sim-scene-broadcaster-system.so"
+            name="gz::sim::systems::SceneBroadcaster" />
+    <plugin filename="libgz-sim-sensors-system.so"
+            name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="libgz-sim-imu-system.so"
+            name="gz::sim::systems::Imu" />
+    <plugin filename="libgz-sim-navsat-system.so"
+            name="gz::sim::systems::NavSat" />
+
+    <!-- ============================================================ -->
+    <!--  Physics                                                      -->
+    <!-- ============================================================ -->
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.02</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>50</real_time_update_rate>
+    </physics>
+
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic" />
+
+    <!-- ============================================================ -->
+    <!--  Lighting                                                     -->
+    <!-- ============================================================ -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 -1.3 0 0.5</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.01 0.01 0.01 1</specular>
+      <intensity>2</intensity>
+      <visualize>false</visualize>
+    </light>
+
+    <!-- ============================================================ -->
+    <!--  Scene                                                        -->
+    <!-- ============================================================ -->
+    <scene>
+      <ambient>1 1 1</ambient>
+      <grid>false</grid>
+      <sky />
+    </scene>
+
+    <!-- ============================================================ -->
+    <!--  Ground plane                                                 -->
+    <!-- ============================================================ -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ============================================================ -->
+    <!--  Warehouse floor (textured ground + tables)                   -->
+    <!-- ============================================================ -->
+    <include>
+      <uri>model://floor</uri>
+      <name>floor</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- ============================================================ -->
+    <!--  Shelves (11 instances)                                       -->
+    <!-- ============================================================ -->
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_01</name>
+      <pose>-5.58 24.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_02</name>
+      <pose>4.62 24.50 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_03</name>
+      <pose>14.40 24.50 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_04</name>
+      <pose>-13.73 15.0 0 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_05</name>
+      <pose>-7.08 5.26 0 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_06</name>
+      <pose>-6.3 15.0 0 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_07</name>
+      <pose>-0.15 5.26 0 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_08</name>
+      <pose>0.63 15.0 0 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_09</name>
+      <pose>6.38 5.26 0 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_10</name>
+      <pose>7.32 15.0 0 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://shelves</uri>
+      <name>shelves_11</name>
+      <pose>14.68 5.26 0 0 0 -1.57</pose>
+    </include>
+
+    <!-- ============================================================ -->
+    <!--  Conveyor blocks (3 instances)                                -->
+    <!-- ============================================================ -->
+    <include>
+      <uri>model://conveyor_block</uri>
+      <name>conveyor_01</name>
+      <pose>-6.0 -10.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://conveyor_block</uri>
+      <name>conveyor_02</name>
+      <pose>0 -10.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://conveyor_block</uri>
+      <name>conveyor_03</name>
+      <pose>6.5 -10.0 0 0 0 0</pose>
+    </include>
+
+    <!-- ============================================================ -->
+    <!--  Warehouse workers (3 actors with trajectories)               -->
+    <!-- ============================================================ -->
+
+    <!-- Worker 1: patrols central aisle (X axis) -->
+    <actor name="worker_01">
+      <skin>
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walk">
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walk" tension="0.6">
+          <waypoint><time>0</time><pose>-10.0 2.0 1.0 0 0 0</pose></waypoint>
+          <waypoint><time>15</time><pose>10.0 2.0 1.0 0 0 0</pose></waypoint>
+          <waypoint><time>20</time><pose>10.0 2.0 1.0 0 0 3.14</pose></waypoint>
+          <waypoint><time>35</time><pose>-10.0 2 1.0 0 0 3.14</pose></waypoint>
+          <waypoint><time>40</time><pose>-10.0 2.0 1.0 0 0 0</pose></waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <!-- Worker 2: patrols side aisle (Y axis) -->
+    <actor name="worker_02">
+      <skin>
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walk">
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walk" tension="0.6">
+          <waypoint><time>0</time><pose>2.5 -10.0 1.0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>20</time><pose>2.5 18.0 1.0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>31</time><pose>10.0 18.0 1.0 0 0 0</pose></waypoint>
+          <waypoint><time>45</time><pose>10.0 -20.0 1.0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>60</time><pose>-7.0 -20.0 1.0 0 0 1.5708</pose></waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <!-- Worker 3: L-shaped route (conveyor zone -> shelves) -->
+    <actor name="worker_03">
+      <skin>
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walk">
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walk" tension="0.6">
+          <waypoint><time>0</time><pose>9 -3 1.0 0 0 3.14</pose></waypoint>
+          <waypoint><time>15</time><pose>-11 -3 1.0 0 0 3.14</pose></waypoint>
+          <waypoint><time>17</time><pose>-11 -3 1.0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>30</time><pose>-11 20 1.0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>32</time><pose>-11 20 1.0 0 0 0</pose></waypoint>
+          <waypoint><time>42</time><pose>-2 20 1.0 0 0 0</pose></waypoint>
+          <waypoint><time>55</time><pose>-2 3 1.0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>65</time><pose>4 3 1.0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>67</time><pose>4 3 1.0 0 0 3.14</pose></waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+  </world>
+</sdf>

@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<!-- Floor model: ground surface + work tables -->
+<!-- Onshape document_id: 413e77afccf5d41747a34ccc / workspace_id: b5425021473a3ff7e609cc44 -->
+<sdf version="1.9">
+  <model name="floor">
+    <static>true</static>
+    <link name="floor">
+      <!-- Part table -->
+      <visual name="table">
+        <pose>6.69 0.76 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_collision">
+        <pose>6.69 0.76 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part floor_surface -->
+      <visual name="floor_visual">
+        <pose>-15.3716 -24.9021 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/suelo.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.301961 0.290196 0.262745 1</ambient>
+          <diffuse>0.301961 0.290196 0.262745 1</diffuse>
+        </material>
+      </visual>
+      <collision name="floor_collision">
+        <pose>-15.3716 -24.9021 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/suelo.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part table_2 -->
+      <visual name="table_2">
+        <pose>-6 0.8 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_2_collision">
+        <pose>-6 0.8 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part table_3 -->
+      <visual name="table_3">
+        <pose>-5.95 -1.575 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_3_collision">
+        <pose>-5.95 -1.575 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part table_4 -->
+      <visual name="table_4">
+        <pose>0.2 0.75 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_4_collision">
+        <pose>0.2 0.75 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part table_5 -->
+      <visual name="table_5">
+        <pose>0.27 -1.595 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_5_collision">
+        <pose>0.27 -1.595 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+      <!-- Part table_6 -->
+      <visual name="table_6">
+        <pose>6.73 -1.585 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+        <material>
+          <ambient>0.909804 0.572549 0.164706 1</ambient>
+          <diffuse>0.909804 0.572549 0.164706 1</diffuse>
+        </material>
+      </visual>
+      <collision name="table_6_collision">
+        <pose>6.73 -1.585 1.0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>meshes/mesa.stl</uri></mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
