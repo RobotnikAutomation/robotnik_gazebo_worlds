@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="damaged_box_small">
+    <link name="link">
+      <inertial>
+        <pose>0 0 0.1085 0 0 0</pose>
+        <mass>0.512</mass>
+        <inertia>
+          <ixx>0.01051918336</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0137691136</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.02026995712</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0.1085 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.525 0.4466 0.217</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0.1085 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/damaged_box.obj</uri>
+            <scale>0.2625 0.2625 0.2625</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

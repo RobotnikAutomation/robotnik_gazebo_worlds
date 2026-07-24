@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="agentic_ai_demo">
+    <physics type="ode">
+      <max_step_size>0.02</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin name="gz::sim::systems::Physics" filename="libgz-sim-physics-system.so"/>
+    <plugin name="gz::sim::systems::UserCommands" filename="libgz-sim-user-commands-system.so"/>
+    <plugin name="gz::sim::systems::SceneBroadcaster" filename="libgz-sim-scene-broadcaster-system.so"/>
+    <plugin name="gz::sim::systems::Sensors" filename="libgz-sim-sensors-system.so">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name="gz::sim::systems::Imu" filename="libgz-sim-imu-system.so"/>
+    <plugin name="gz::sim::systems::NavSat" filename="libgz-sim-navsat-system.so"/>
+    <plugin name="gz::sim::systems::Contact" filename="libgz-sim-contact-system.so"/>
+
+    <scene>
+      <ambient>1 1 1</ambient>
+      <grid>false</grid>
+      <sky></sky>
+    </scene>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.8 0.8 0.8 1</specular>
+      <direction>0 0 -1</direction>
+    </light>
+
+    <include>
+      <uri>model://final_demo</uri>
+      <name>final_demo_room</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_top</name>
+      <pose>0 5.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_type_b</uri>
+      <name>north_wall_shelf_type_b_1</name>
+      <pose>-7.5 9.55 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_type_b</uri>
+      <name>north_wall_shelf_type_b_2</name>
+      <pose>-3.6 9.55 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_type_b</uri>
+      <name>north_wall_shelf_type_b_3</name>
+      <pose>0.3 9.55 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_type_b</uri>
+      <name>north_wall_shelf_type_b_4</name>
+      <pose>4.2 9.55 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://shelf_type_b</uri>
+      <name>north_wall_shelf_type_b_5</name>
+      <pose>8.1 9.55 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_left</name>
+      <pose>-5.5 0 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://damaged_box_small</uri>
+      <name>work_table_left_damaged_box</name>
+      <pose>-5.48 -0.45 1.05 0 0 -0.15</pose>
+    </include>
+
+    <include>
+      <uri>model://Cardboard box 40</uri>
+      <name>work_table_left_medium_box</name>
+      <pose>-5.56 0.05 1.196916 0 0 0.12</pose>
+    </include>
+
+    <include>
+      <uri>model://Cardboard box</uri>
+      <name>work_table_left_cardboard_box</name>
+      <pose>-5.40 0.55 1.20 0 0 0.30</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_right</name>
+      <pose>5.5 0 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://damaged_box_small</uri>
+      <name>work_table_right_damaged_box</name>
+      <pose>5.28 -0.50 1.05 0 0 0.22</pose>
+    </include>
+
+    <include>
+      <uri>model://Cardboard box 40</uri>
+      <name>work_table_right_medium_box</name>
+      <pose>5.40 0.00 1.196916 0 0 -0.18</pose>
+    </include>
+
+    <include>
+      <uri>model://Cardboard box</uri>
+      <name>work_table_right_cardboard_box</name>
+      <pose>5.24 0.58 1.20 0 0 -0.35</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_bottom</name>
+      <pose>0 -9.35 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_bottom_left_corner</name>
+      <pose>-5.50 -9.35 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://work_table</uri>
+      <name>work_table_bottom_right_corner</name>
+      <pose>5.50 -9.35 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_1_3</uri>
+      <name>work_table_bottom_right_corner_box_1_1</name>
+      <pose>5.325 -9.55 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_1_2</uri>
+      <name>work_table_bottom_right_corner_box_1_2</name>
+      <pose>5.50 -9.55 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_1_1</uri>
+      <name>work_table_bottom_right_corner_box_1_3</name>
+      <pose>5.675 -9.55 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_2_3</uri>
+      <name>work_table_bottom_right_corner_box_2_1</name>
+      <pose>5.325 -9.35 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_2_2</uri>
+      <name>work_table_bottom_right_corner_box_2_2</name>
+      <pose>5.50 -9.35 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_2_1</uri>
+      <name>work_table_bottom_right_corner_box_2_3</name>
+      <pose>5.675 -9.35 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_3_3</uri>
+      <name>work_table_bottom_right_corner_box_3_1</name>
+      <pose>5.325 -9.15 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_3_2</uri>
+      <name>work_table_bottom_right_corner_box_3_2</name>
+      <pose>5.50 -9.15 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://imagen_cubo_3_1</uri>
+      <name>work_table_bottom_right_corner_box_3_3</name>
+      <pose>5.675 -9.15 1.08 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <uri>model://rbg_cube</uri>
+      <name>work_table_bottom_left_corner_rbg_cube_1</name>
+      <pose>-5.7 -9.0904 1.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rbg_cube</uri>
+      <name>work_table_bottom_left_corner_rbg_cube_2</name>
+      <pose>-5.3 -9.0904 1.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rbg_cube</uri>
+      <name>work_table_bottom_left_corner_rbg_cube_3</name>
+      <pose>-5.3 -9.3904 1.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rbg_cube</uri>
+      <name>work_table_bottom_left_corner_rbg_cube_4</name>
+      <pose>-5.7 -9.3904 1.15 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://damaged_boxes_sign</uri>
+      <name>bottom_wall_damaged_boxes_sign</name>
+      <pose>0 -9.92 2.25 1.5708 0 3.1416</pose>
+    </include>
+  </world>
+</sdf>

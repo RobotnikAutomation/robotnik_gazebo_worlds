@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="agentic_ai_demo">
+    <static>true</static>
+
+    <link name="link">
+      <visual name="visual">
+        <pose>0 0 0 1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/agentic_ai_demo.glb</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="floor_collision">
+        <pose>0 0 -0.0289 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>20.15 20.15 0.06</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="wall_north_collision">
+        <pose>0 10.04 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>20.15 0.2 4.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="wall_south_collision">
+        <pose>0 -10.04 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>20.15 0.2 4.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="wall_east_collision">
+        <pose>10.04 0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 20.15 4.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="wall_west_collision">
+        <pose>-10.04 0 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 20.15 4.05</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

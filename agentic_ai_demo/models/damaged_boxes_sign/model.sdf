@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="damaged_boxes_sign">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Meshy_AI_Damaged_Boxes_0424105248_texture.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
