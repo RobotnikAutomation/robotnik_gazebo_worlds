@@ -6,7 +6,7 @@ find_package(ament_cmake REQUIRED)
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.sh.in")
 
 install(
-  DIRECTORY launch worlds models
+  DIRECTORY launch worlds models maps
   DESTINATION share/${PROJECT_NAME}/
 )
 
